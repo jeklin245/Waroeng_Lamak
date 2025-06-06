@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Waroeng Lamak</title>
+  <link rel="stylesheet" href="asat.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar" id="navbar">
+    <div class="logo">
+      <img src="WAROENG LAMAK.png" alt="Logo Waroeng Lamak">
+    </div>
+
+    <!-- Tombol Hamburger -->
+    <button class="hamburger" id="menu-toggle">&#9776;</button>
+
+    <!-- Menu Navigasi -->
+    <div class="menu" id="navigasi">
+      <a href="#beranda">Beranda</a>
+      <a href="#menu">Menu</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+  </div>
+
+  <!-- Header dengan video -->
+  <header class="video-header">
+    <video autoplay muted loop id="bg-video">
+      <source src="vid.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay">
+      <img src="logo.png" alt="Logo Kelompok" class="logo">
+      <h1>Waroeng Lamak</h1>
+      <p>Alamak! Rasanyo indak tahan</p>
+    </div>
+  </header>
+
+  <section id="beranda" class="container why-lamak">
+  <div class="why-text">
+    <h2>Kenapa Harus Waroeng Lamak?</h2>
+    <div class="kolom">
+    <p>
+      Kami membawa rasa otentik dari Ranah Minang langsung ke hadapanmu. Dari sate padang berkuah kental, lontong sayur yang harum rempah, hingga es tebak dan keripik sanjai yang melegenda — semua dibuat dengan resep warisan keluarga dan cinta akan budaya. Setiap suapan di Waroeng Lamak bukan hanya lezat, tapi juga membawa cerita tentang tradisi, kampung halaman, dan kehangatan meja makan orang Minang.
+    </p>
+  </div>
+  </div>
+</section>
+
+  <section id="menu" class="container">
+    <h2 class="section-title">Menu Kami</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="sate.jpg" alt="Sate Padang" />
+        <h3>Sate Padang</h3>
+        <p>Potongan daging empuk disiram kuah kental khas Padang yang kaya rempah.</p>
+        <div class="price-cart">
+       <div class="price-box">30.000</div>
+    <button class="btn-cart" data-name="Sate Padang" data-price="30000">🛒</button>
+  </div>
+</div>
+      <div class="card">
+        <img src="lontong sayur.jpg" alt="Lontong Sayur" />
+        <h3>Lontong Sayur</h3>
+        <p>Lontong dan sayur yang menyegarkan berpadu dengan kentalnya kuah santan yang gurih nikmat.</p>
+        <div class="price-cart">
+    <div class="price-box">18.000</div>
+    <button class="btn-cart" data-name="Lontong Sayur" data-price="18000">🛒</button>
+  </div>
+</div>
+      <div class="card">
+        <img src="es tebak.jpg" alt="Es Tebak" />
+        <h3>Es Tebak</h3>
+        <p>Minuman segar manis dengan isian tebak, tape, kolang-kaling dan cincau hitam.</p>
+        <div class="price-cart">
+    <div class="price-box">15.000</div>
+    <button class="btn-cart" data-name="Es Tebak" data-price="15000">🛒</button>
+  </div>
+</div>
+      <div class="card">
+        <img src="es durian.jpg" alt="Es Durian" />
+        <h3>Es Durian</h3>
+        <p>Perpaduan es serut dengan durian lokal khas Ranah Minang yang diblender dan diberi susu kental manis.</p>
+        <div class="price-cart">
+    <div class="price-box">15.000</div>
+    <button class="btn-cart" data-name="Es Durian" data-price="15000">🛒</button>
+  </div>
+</div>
+      <div class="card">
+        <img src="bubur.jpg" alt="bubur kampiun" />
+        <h3>Bubur Kampiun</h3>
+        <p>Perpaduan bermacam bubur khas Minang dalam satu: bubur ketan hitam, bubur kacang hijau, bubur candil, kolak pisang, bubur sumsum dan serutan kelapa. </p>
+       <div class="price-cart">
+    <div class="price-box">15.000</div>
+    <button class="btn-cart" data-name="Bubur Kampiun" data-price="15000">🛒</button>
+  </div>
+</div>
+      <div class="card">
+        <img src="keripik.jpg" alt="Keripik Sanjai" />
+        <h3>Keripik Sanjai</h3>
+        <p>Keripik balado pedas manis khas Bukittinggi.</p>
+        <div class="price-cart">
+    <div class="price-box">8.000</div>
+    <button class="btn-cart" data-name="Keripik Sanjai" data-price="8000">🛒</button>
+  </div>
+</div>
+</section>
+<section id="cart-section" class="container">
+  <h2>Keranjang Pesanan</h2>
+  <div id="cart-items">Belum ada pesanan.</div>
+  <div id="cart-total" style="margin-top: 10px; font-weight: bold;">Total: Rp 0</div>
+  <button id="order-btn" disabled>Pesan Sekarang</button>
+</section>
+
+
+<section id="tentang" class="container meaning">
+  <h2 class="section-title">Apa Artinya Waroeng Lamak?</h2>
+  <div class="meaning-row">
+    <div class="meaning-box">
+      <div class="grid">
+      <div class="kartu">
+        <img src="waroeng.png" alt="">
+      <h3>WAROENG</h3>
+      <p>
+        Tempat sederhana yang menyediakan berbagai kebutuhan — makanan, minuman, dan kehangatan suasana.
+      </p>
+    </div>
+    </div>
+    </div>
+    <div class="meaning-box">
+      <div class="grid">
+      <div class="kartu">
+        <img src="sate1.png" alt="">
+      <h3>LAMAK</h3>
+      <p>
+        Dalam bahasa Minangkabau, berarti <strong>lezat</strong> atau <strong>enak</strong>, biasanya menggambarkan makanan yang membangkitkan selera.
+      </p>
+    </div>
+    </div>
+  </div>
+</section>
+  
+    <section id="kontak" class="footer">
+    <p>Nggak cuma enak di lidah — seru juga di Instagram & WhatsApp kami!</p>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/waroeng.lamak" target="_blank" class="ig-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+        @waroeng.lamak
+      </a>
+      <a href="https://wa.me/6285236959385" target="_blank" class="wa-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+        0852-3695-9385
+      </a>
+    </div>
+  </section>
+
+  <!-- Script scroll dan toggle hamburger -->
+  <script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", function () {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        navbar.style.top = "-100px";
+      } else {
+        navbar.style.top = "0";
+      }
+      lastScrollTop = scrollTop;
+    });
+
+    // Toggle menu hamburger
+    const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("navigasi"); // ubah di sini
+toggle.addEventListener("click", function () {
+  menu.classList.toggle("show");
+});
+  
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
+  }
+
+  // Tutup menu setelah klik salah satu item
+  document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.menu').classList.remove('show');
+    });
+  });
+
+  const cart = {};
+
+function formatRupiah(num) {
+  return 'Rp ' + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+function updateCartUI() {
+  const cartItemsDiv = document.getElementById('cart-items');
+  const cartTotalDiv = document.getElementById('cart-total');
+  const orderBtn = document.getElementById('order-btn');
+
+  let total = 0;
+  let html = '';
+
+  const entries = Object.entries(cart);
+  if (entries.length === 0) {
+    cartItemsDiv.textContent = 'Belum ada pesanan.';
+    cartTotalDiv.textContent = 'Total: Rp 0';
+    orderBtn.disabled = true;
+    return;
+  }
+
+  entries.forEach(([name, item]) => {
+    html += `<div>${name} x${item.qty} = ${formatRupiah(item.price * item.qty)}</div>`;
+    total += item.price * item.qty;
+  });
+
+  cartItemsDiv.innerHTML = html;
+  cartTotalDiv.textContent = 'Total: ' + formatRupiah(total);
+  orderBtn.disabled = false;
+}
+
+function showAddedMessage(btn) {
+  // Cek apakah sudah ada pesan sebelumnya, hapus dulu
+  let existingMsg = btn.parentElement.querySelector('.added-msg');
+  if (existingMsg) {
+    existingMsg.remove();
+  }
+
+  const msg = document.createElement('span');
+  msg.textContent = 'Barang ditambahkan!';
+  msg.className = 'added-msg';
+  msg.style.color = 'green';
+  msg.style.marginLeft = '8px';
+  msg.style.fontWeight = 'bold';
+  msg.style.fontSize = '0.9em';
+
+  btn.parentElement.appendChild(msg);
+
+  setTimeout(() => {
+    msg.remove();
+  }, 1500);
+}
+
+function addToCart(name, price, btn) {
+  if (cart[name]) {
+    cart[name].qty += 1;
+  } else {
+    cart[name] = { price: price, qty: 1 };
+  }
+  updateCartUI();
+
+  // Efek tombol berubah warna sebentar
+  btn.style.backgroundColor = '#4CAF50';  // warna hijau
+  btn.style.color = 'white';
+  setTimeout(() => {
+    btn.style.backgroundColor = ''; // balik ke warna default
+    btn.style.color = '';
+  }, 500);
+
+  // Tampilkan pesan barang ditambahkan
+  showAddedMessage(btn);
+}
+
+// Pasang event listener ke semua tombol keranjang
+document.querySelectorAll('.btn-cart').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const name = btn.getAttribute('data-name');
+    const price = parseInt(btn.getAttribute('data-price'), 10);
+    addToCart(name, price, btn);
+  });
+});
+
+// Tombol Pesan Sekarang (sudah disiapkan)
+document.getElementById('order-btn').addEventListener('click', () => {
+  // Contoh: buka WhatsApp dengan isi pesan pesanan
+  let pesan = 'Halo Waroeng Lamak, saya ingin memesan:\n';
+  for (const [name, item] of Object.entries(cart)) {
+    pesan += `${name} x${item.qty} = Rp${item.price * item.qty}\n`;
+  }
+  const total = Object.values(cart).reduce((sum, item) => sum + item.price * item.qty, 0);
+  pesan += `Total: Rp${total}`;
+  const waUrl = `https://wa.me/6285236959385?text=${encodeURIComponent(pesan)}`;
+  window.open(waUrl, '_blank');
+});
+</script>
+</body>
+</html>

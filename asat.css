@@ -1,0 +1,520 @@
+/* ============ GLOBAL RESET ============ */
+@font-face {
+  font-family: 'Cooper';
+  src: url('COOPBL.TTF') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f2e6;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============ VIDEO HEADER ============ */
+.video-header {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 8px;
+}
+
+.overlay h1 {
+  font-family: 'Merriweather ', bold;
+  font-weight: 800px;
+  font-size: 50px;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px black;
+}
+
+
+
+.overlay p {
+  font-size: 1.2rem;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+/* ============ NAVBAR ============ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 20px;
+  height: 70px;
+  position: fixed;
+  transition: top 0.3s ease-in-out;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo img {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 25px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* JS Toggle Support */
+.menu.show {
+  display: flex;
+}
+
+/* ============ SECTION & CARD ============ */
+section {
+  scroll-margin-top: 80px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.section-title {
+  font-family: 'Cooper';
+  font-weight: 1000px;
+  color: #8b0000;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.kartu {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.8s;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* penting */
+  min-height: 430px; /* sesuaikan jika perlu */
+  overflow: hidden;
+  transition: transform 0.8s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.kartu:hover {
+  transform: scale(1.10);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card h3 {
+  color: #8b0000;
+  font-size: 1.3rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.card p {
+  padding: 0 1rem 1rem;
+  flex-grow: 1; 
+  margin-bottom: 12px;
+}
+
+.kartu {
+  padding: 24px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cart-items div {
+  background-color: #d4edda;  /* warna hijau muda */
+  color: #155724;             /* warna hijau gelap */
+  padding: 8px 8px;
+  margin-bottom: 6px;
+  border-radius: 10px;        /* buat pinggiran bulat */
+  border: 1px solid #c3e6cb; /* border hijau lembut */
+  font-weight: 600;
+}
+
+.kartu img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/4;
+}
+
+.kolom {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+}
+
+.price-box {
+  background-color: #361b08; /* coklat tua, bisa diganti sesuai selera */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  width: 120px;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+.price-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 16px 16px;
+}
+
+.btn-cart {
+  font-size: 1.6rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  user-select: none;
+  transition: 0.2s;
+  padding: 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 6px;      /* ✅ jarak dari elemen di sebelah kiri */
+  outline: none;          /* ✅ hilangkan garis fokus default */
+}
+
+.btn-cart:hover {
+  transform: scale(1.2);
+  background-color: #388e3c;       /* warna saat hover */
+  color: white;
+}
+
+#cart-section {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px; /* biar nggak kegedean di laptop */
+  width: 90%;       /* biar fleksibel di HP */
+  text-align: center;
+}
+
+
+#order-btn {
+  margin-top: 12px;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  background-color: #8b0000;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+#order-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+
+/* ============ WHY LAMAK ============ */
+.why-lamak {
+  text-align: center;
+  width: 83%;
+}
+
+.why-lamak h2 {
+  font-size: 40px;
+  font-family: 'Cooper';
+
+  
+  margin-bottom: 20px;
+  color: #8b0000;
+}
+
+
+.why-lamak p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.meaning-row {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+  align-items: stretch;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.meaning-box img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  background-color: #25160c;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.footer img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+.navbar {
+    flex-direction: row;
+    padding: 8px 16px;
+  }
+
+.price-box{
+  width: 30%;
+  padding-left: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-cart{
+  padding-right: 20px;
+}
+
+.logo {
+    height: 307px; /* Lebih kecil di HP */
+    width: auto;
+    margin-top: 0px;
+    padding-top: 100px;
+  }
+
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* tinggi navbar */
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* semi-transparent black */
+    width: 100%;
+    padding: 15px 20px;
+    z-index: 15;
+  }
+
+  .menu {
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .navbar .menu a {
+    color: white;
+    padding: 10px 0;
+    font-size: 18px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+  }
+
+  .logo img {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  margin: 0;        /* hilangkan margin-top */
+  padding: 5px 0;
+  vertical-align: middle;
+}
+
+  .video-header {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  z-index: 0;
+  padding-top: 0px; /* kompensasi navbar fixed */
+}
+  #bg-video {
+    position: absolute;
+    bottom: 0 ;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+
+  .overlay h1 {
+    font-size: 38px;
+  }
+
+  .overlay p {
+    font-size: 18px;
+  }
+
+  .section-title{
+    font-size: 36px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .kartu {
+    width: 100%;
+  }
+
+  .why-text h2 {
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .why-text p {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .meaning-row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    justify-content: center;
+  }
+
+  .overlay {
+    padding: 10px;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    z-index: 20;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
